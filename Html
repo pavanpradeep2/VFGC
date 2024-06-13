@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Responsive Food Cards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="heading">
+            <img src="https://i.ibb.co/C6Bb4tz/IMG-20240613-WA0008.jpg" alt="Rocco's Bistro Logo">
+            <h1>ROCCO'S BISTRO</h1>
+            <h3>- MENU -</h3>
+        </div>
+        <div class="food-items" onclick="showDetails('modal1')">
+            <img src="https://i.ibb.co/SNM1zNP/IMG-20240613-WA0013.jpg?raw=1" alt="Burger">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Haki paisa</h5>
+                    <h5 class="price">$8</h5>
+                </div>
+                
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="food-items" onclick="showDetails('modal2')">
+            <img src="https://i.ibb.co/QC7XMGd/IMG-20240613-WA0018.jpg?raw=1" alt="chicken">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Jak fruit seeds sumber</h5>
+                    <h5 class="price">$15</h5>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, illo eveniet fugiat totam, est eligendi </p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="food-items" onclick="showDetails('modal3')">
+            <img src="https://i.ibb.co/xFyzwCy/IMG-20240613-WA0014.jpg?raw=1" alt="soup">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Ginu</h5>
+                    <h5 class="price">$8</h5>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit aut veritatis magnam quo provident nesciunt obcaecati unde corporis dolore voluptatem rerum beatae in! Minus?</p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="food-items" onclick="showDetails('modal4')">
+            <img src="https://i.ibb.co/Jy7HMq5/IMG-20240613-WA0015.jpg?raw=1" alt="spaghetti">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Hobbatu</h5>
+                    <h5 class="price">$12</h5>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur sit amet consectetur adipisicing adipisicing elit.</p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="food-items" onclick="showDetails('modal5')">
+            <img src="https://i.ibb.co/9qhwhJb/IMG-20240613-WA0021.jpg?raw=1" alt="salmon">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Halsandhi kalu sumber</h5>
+                    <h5 class="price">$15</h5>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="food-items" onclick="showDetails('modal6')">
+            <img src="https://i.ibb.co/xqpCzJz/IMG-20240613-WA0022.jpg?raw=1" alt="sandwich">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Avarekalu samber</h5>
+                    <h5 class="price">$10</h5>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing magnam quo provident nesciunt obcaecati unde corporis dolore elit.</p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="food-items" onclick="showDetails('modal7')">
+            <img src="https://i.ibb.co/4VbDLyp/IMG-20240613-WA0012.jpg?raw=1" alt="salmon">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Halsandhi kalu sumber</h5>
+                    <h5 class="price">$15</h5>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="food-items" onclick="showDetails('modal8')">
+            <img src="https://i.ibb.co/q5NxCF6/IMG-20240613-WA0017.jpg?raw=1" alt="salmon">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Halsandhi kalu sumber</h5>
+                    <h5 class="price">$15</h5>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="food-items" onclick="showDetails('modal9')">
+            <img src="https://i.ibb.co/YfQM94R/IMG-20240613-WA0011.jpg?raw=1" alt="salmon">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Halsandhi kalu sumber</h5>
+                    <h5 class="price">$15</h5>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="food-items" onclick="showDetails('modal10')">
+            <img src="https://i.ibb.co/rF7Pqs0/IMG-20240613-WA0019.jpg?raw=1" alt="salmon">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Halsandhi kalu sumber</h5>
+                    <h5 class="price">$15</h5>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <a href="#" target="_blank">My Youtube Channel &rarr;</a>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetails('modal1')">&times;</span>
+            <h2>Haki paisa</h2>
+            <p>Details about.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetails('modal2')">&times;</span>
+            <h2>Jak fruit seeds sumber</h2>
+            <p>Details about.</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetails('modal3')">&times;</span>
+            <h2>Ginu</h2>
+            <p>Details about.</p>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetails('modal4')">&times;</span>
+            <h2>Basil Pesto Spaghetti</h2>
+            <p>Details about Basil Pesto Spaghetti.</p>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetails('modal5')">&times;</span>
+            <h2>Roast Salmon</h2>
+            <p>Details about Roast Salmon.</p>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetails('modal6')">&times;</span>
+            <h2>BBQ Sandwich</h2>
+            <p>Details about BBQ Sandwich.</p>
+        </div>
+     </div>
+        
+         <div id="modal7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetails('modal7')">&times;</span>
+            <h2>Smoky Hamburger</h2>
+            <p>Details about Smoky Hamburger.</p>
+        </div>
+    </div>
+     <div id="modal8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetails('modal8')">&times;</span>
+            <h2>Smoky Hamburger</h2>
+            <p>Details about Smoky Hamburger.</p>
+        </div>
+    </div>
+     <div id="modal9" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetails('modal9')">&times;</span>
+            <h2>Smoky Hamburger</h2>
+            <p>Details about Smoky Hamburger.</p>
+        </div>
+    </div>
+     <div id="modal10" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetails('modal10')">&times;</span>
+            <h2>Smoky Hamburger</h2>
+            <p>Details about Smoky Hamburger.</p>
+        </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    </body>
+</html>
