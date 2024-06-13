@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        
+    </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Responsive Food Cards</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            position: relative;
+        }
+
+        .heading {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .heading img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        .heading h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .heading h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #777;
+        }
+
+        .food-items {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .food-items:hover {
+            transform: scale(1.05);
+        }
+
+        .food-items img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .details {
+            padding: 15px;
+        }
+
+        .details-sub {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .details-sub h5 {
+            margin: 0;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .details-sub .price {
+            color: #e63946;
+            font-weight: 600;
+        }
+
+        .details p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px 15px;
+            background-color: #e63946;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #d62839;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            color: #e63946;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="heading">
+            <img src="/mnt/data/file-J5LAcOFxX6XfhVQBJS7gQwDQ" alt="Rocco's Bistro Logo">
+            <h1>ROCCO'S BISTRO</h1>
+            <h3>- MENU -</h3>
+        </div>
+        <div class="food-items" onclick="openModal('modal1')">
+            <img src="https://dl.dropbox.com/s/da8arutjgtwnavj/burger-compress.jpg?raw=1" alt="Burger">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Smoky Hamburger</h5>
+                    <h5 class="price">$8</h5>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="food-items" onclick="openModal('modal2')">
+            <img src="https://dl.dropbox.com/s/3fgh8xbjt21uymp/pexels_harry_dona_23_LIj2k.jpg?raw=1" alt="chicken">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Honey Garlic Chicken</h5>
+                    <h5 class="price">$15</h5>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, illo eveniet fugiat totam, est eligendi </p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="food-items" onclick="openModal('modal3')">
+            <img src="https://dl.dropbox.com/s/w6s538m0lxpowlh/pexels_quang_nguyen__7U6hw.jpg?raw=1" alt="soup">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Manchow Soup</h5>
+                    <h5 class="price">$8</h5>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit aut veritatis magnam quo provident nesciunt obcaecati unde corporis dolore voluptatem rerum beatae in! Minus?</p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="food-items" onclick="openModal('modal4')">
+            <img src="https://dl.dropbox.com/s/fqybjc4dyosav6l/pexels_lisa_fotios_1_koONw.jpg?raw=1" alt="spaghetti">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Basil Pesto Spaghetti</h5>
+                    <h5 class="price">$12</h5>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur sit amet consectetur adipisicing adipisicing elit.</p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="food-items" onclick="openModal('modal5')">
+            <img src="https://dl.dropbox.com/s/w46ydx94mx8hx9q/pexels_sebastian_com_A20tn.jpg?raw=1" alt="salmon">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Roast Salmon</h5>
+                    <h5 class="price">$15</h5>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+        <div class="food-items" onclick="openModal('modal6')">
+            <img src="https://dl.dropbox.com/s/frsatvu8fli9t4d/pexels_erin_wang_164_GmJqu.jpg?raw=1" alt="sandwich">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>BBQ Sandwich</h5>
+                    <h5 class="price">$10</h5>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing magnam quo provident nesciunt obcaecati unde corporis dolore elit.</p>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <a href="https://youtu.be/2wL6J7oJbpc" target="_blank">My Youtube Channel &rarr;</a>
